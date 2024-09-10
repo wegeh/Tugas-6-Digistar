@@ -1,0 +1,2398 @@
+{
+	"info": {
+		"_postman_id": "1a27f0a0-ce09-4fb6-8a98-606d31224244",
+		"name": "TUGAS 6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38004220"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"coba1\",\r\n  \"email\": \"coba1@example.com\",\r\n  \"password\": \"test123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"coba3\",\r\n  \"email\": \"coba3@example.com\",\r\n  \"password\": \"test123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/digistar/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "292"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"124-R5FUc3TNW82a+TFMXsDy1OHq+XI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:08:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user_id\": \"23a55ea9-9d45-4a37-8139-fd20a55685d1\",\n    \"username\": \"coba3\",\n    \"email\": \"coba3@example.com\",\n    \"password\": \"$2b$10$1uIBnF07Z0mA5NMnXZ1iTuqfZMLKG0yWLSn4ZOGbtEOGydwAIufJW\",\n    \"_id\": \"66e06ef42e8f65c1cda6e738\",\n    \"created_at\": \"2024-09-10T16:08:20.382Z\",\n    \"updated_at\": \"2024-09-10T16:08:20.382Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"testuser@example.com\",\r\n  \"password\": \"test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"testuser@example.com\",\r\n  \"password\": \"test123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/digistar/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "371"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"173-7f2AHcovy0s9ED2MKyFV8r0IKQk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:07:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success login!\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjMjcxOTY1MC05ZDc0LTRmMWMtOWQ5OC0xYThiMzA0NWQ3Y2QiLCJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkTFJxMWhGSEp3NVZCaml0YkZReHp6ZU5jc0NRa3lydkFtdkRUV0JsQ0RrZkYuOHZCaUV6YS4iLCJpYXQiOjE3MjU5ODQ0MjAsImV4cCI6MTcyNTk4NjIyMH0.r62_ggUWXmQCY0Is0lSDv_tiY2hdCzOYW8FX6ALti1Y\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/user/c2719650-9d74-4f1c-9d98-1a8b3045d7cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"user",
+								"c2719650-9d74-4f1c-9d98-1a8b3045d7cd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/user/c2719650-9d74-4f1c-9d98-1a8b3045d7cd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"user",
+										"c2719650-9d74-4f1c-9d98-1a8b3045d7cd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12a-dvgXiQEL9KLr0JO7SBtbWfQemuc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:07:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66e04362a028cc63c1c00fa0\",\n    \"user_id\": \"c2719650-9d74-4f1c-9d98-1a8b3045d7cd\",\n    \"username\": \"testuser\",\n    \"email\": \"testuser@example.com\",\n    \"password\": \"$2b$10$LRq1hFHJw5VBjitbFQxzzeNcsCQkyrvAmvDTWBlCDkfF.8vBiEza.\",\n    \"created_at\": \"2024-09-10T13:02:26.697Z\",\n    \"updated_at\": \"2024-09-10T13:02:26.697Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"user",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/user/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"user",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1149"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"47d-m2LzoGbURcYJIx0TrIN8WekmW5U\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:07:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"user_id\": \"c2719650-9d74-4f1c-9d98-1a8b3045d7cd\",\n        \"username\": \"testuser\",\n        \"email\": \"testuser@example.com\",\n        \"role\": null,\n        \"created_at\": \"2024-09-10T13:02:26.697Z\",\n        \"updated_at\": \"2024-09-10T13:02:26.697Z\"\n    },\n    {\n        \"user_id\": \"e173907e-c679-40fc-b367-384a2d1e017d\",\n        \"username\": \"apa\",\n        \"email\": \"apa@example.com\",\n        \"role\": null,\n        \"created_at\": \"2024-09-10T15:22:43.901Z\",\n        \"updated_at\": \"2024-09-10T15:22:43.901Z\"\n    },\n    {\n        \"user_id\": \"6fcfbc92-66b9-49b3-91b9-8a2b25cea03a\",\n        \"username\": \"testuser1\",\n        \"email\": \"testuser1@example.com\",\n        \"role\": null,\n        \"created_at\": \"2024-09-10T15:23:53.332Z\",\n        \"updated_at\": \"2024-09-10T15:23:53.332Z\"\n    },\n    {\n        \"user_id\": \"241ca840-1149-41ce-98cb-b263adb0f018\",\n        \"username\": \"coba\",\n        \"email\": \"coba@example.com\",\n        \"role\": null,\n        \"created_at\": \"2024-09-10T16:04:12.913Z\",\n        \"updated_at\": \"2024-09-10T16:04:12.914Z\"\n    },\n    {\n        \"user_id\": \"77aecf38-1caf-4efb-ae2d-e845cffa1534\",\n        \"username\": \"coba1\",\n        \"email\": \"coba1@example.com\",\n        \"role\": null,\n        \"created_at\": \"2024-09-10T16:04:35.277Z\",\n        \"updated_at\": \"2024-09-10T16:04:35.277Z\"\n    },\n    {\n        \"user_id\": \"b6c0ceb6-5ba8-4248-9961-ef5f10b982f0\",\n        \"username\": \"coba2\",\n        \"email\": \"coba2@example.com\",\n        \"role\": null,\n        \"created_at\": \"2024-09-10T16:06:21.650Z\",\n        \"updated_at\": \"2024-09-10T16:06:21.650Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"testuser\",\r\n  \"email\": \"testuser@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/user/c2719650-9d74-4f1c-9d98-1a8b3045d7cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"user",
+								"c2719650-9d74-4f1c-9d98-1a8b3045d7cd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"testuser\",\r\n  \"email\": \"testuser@example.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/digistar/user/c2719650-9d74-4f1c-9d98-1a8b3045d7cd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"user",
+										"c2719650-9d74-4f1c-9d98-1a8b3045d7cd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12a-dvgXiQEL9KLr0JO7SBtbWfQemuc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:07:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66e04362a028cc63c1c00fa0\",\n    \"user_id\": \"c2719650-9d74-4f1c-9d98-1a8b3045d7cd\",\n    \"username\": \"testuser\",\n    \"email\": \"testuser@example.com\",\n    \"password\": \"$2b$10$LRq1hFHJw5VBjitbFQxzzeNcsCQkyrvAmvDTWBlCDkfF.8vBiEza.\",\n    \"created_at\": \"2024-09-10T13:02:26.697Z\",\n    \"updated_at\": \"2024-09-10T13:02:26.697Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/user/68e37cfb-f3fa-467d-b1aa-7cb9330ab16c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"user",
+								"68e37cfb-f3fa-467d-b1aa-7cb9330ab16c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/digistar/user/68e37cfb-f3fa-467d-b1aa-7cb9330ab16c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"user",
+										"68e37cfb-f3fa-467d-b1aa-7cb9330ab16c"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Create Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Administrator\",\r\n  \"permissions\": [\"create\", \"read\", \"update\", \"delete\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/role/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"role",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/role/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"role",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Roles",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/role/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"role",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "221"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dd-vNg1QDw326AjW0hDtCPw9cF7giE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:09:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"66e05c70f4866eb0443b0207\",\n        \"role_id\": \"83726fa4-5d5e-4f64-a729-6f5853cc742e\",\n        \"name\": \"Editor\",\n        \"permissions\": [\n            \"read\",\n            \"update\"\n        ],\n        \"created_at\": \"2024-09-10T14:49:20.865Z\",\n        \"updated_at\": \"2024-09-10T14:49:20.865Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Role by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/role/83726fa4-5d5e-4f64-a729-6f5853cc742e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"role",
+								"83726fa4-5d5e-4f64-a729-6f5853cc742e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Role by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/role/83726fa4-5d5e-4f64-a729-6f5853cc742e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"role",
+										"83726fa4-5d5e-4f64-a729-6f5853cc742e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "219"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"db-KXvGtWJvR3TVJJImAxV22ocp3bE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:09:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66e05c70f4866eb0443b0207\",\n    \"role_id\": \"83726fa4-5d5e-4f64-a729-6f5853cc742e\",\n    \"name\": \"Editor\",\n    \"permissions\": [\n        \"read\",\n        \"update\"\n    ],\n    \"created_at\": \"2024-09-10T14:49:20.865Z\",\n    \"updated_at\": \"2024-09-10T14:49:20.865Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update role",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Editor\",\r\n  \"permissions\": [\"read\", \"update\", \"delete\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/role/83726fa4-5d5e-4f64-a729-6f5853cc742e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"role",
+								"83726fa4-5d5e-4f64-a729-6f5853cc742e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update role",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Editor\",\r\n  \"permissions\": [\"read\", \"update\", \"delete\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/digistar/role/83726fa4-5d5e-4f64-a729-6f5853cc742e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"role",
+										"83726fa4-5d5e-4f64-a729-6f5853cc742e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e4-zQtvDvrOBFouC7Wqdv9yadQDZtM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:09:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66e05c70f4866eb0443b0207\",\n    \"role_id\": \"83726fa4-5d5e-4f64-a729-6f5853cc742e\",\n    \"name\": \"Editor\",\n    \"permissions\": [\n        \"read\",\n        \"update\",\n        \"delete\"\n    ],\n    \"created_at\": \"2024-09-10T14:49:20.865Z\",\n    \"updated_at\": \"2024-09-10T14:49:20.865Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"delete\",\r\n  \"permissions\": [\"create\", \"read\", \"update\", \"delete\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/role/51b2cc2a-1805-437a-ba22-4b46c26538f1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"role",
+								"51b2cc2a-1805-437a-ba22-4b46c26538f1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "Create Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Laptop\",\r\n  \"price\": 1200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Item by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/item/29536544-4d82-4f59-b629-0b526b86296e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"item",
+								"29536544-4d82-4f59-b629-0b526b86296e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Item by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/item/29536544-4d82-4f59-b629-0b526b86296e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"item",
+										"29536544-4d82-4f59-b629-0b526b86296e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "209"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d1-i2u+IwUhy4brGeHE9quPmPyBDYE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:10:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66e05f254bd553ca9929cd04\",\n    \"item_id\": \"29536544-4d82-4f59-b629-0b526b86296e\",\n    \"name\": \"High-End Laptop\",\n    \"price\": 2400,\n    \"created_at\": \"2024-09-10T15:00:53.066Z\",\n    \"updated_at\": \"2024-09-10T15:00:53.066Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"item"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/item",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"item"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "409"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"199-CJ7xWwVKvgNtz6uNwq5iqx30jrA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:10:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"66e05f254bd553ca9929cd04\",\n        \"item_id\": \"29536544-4d82-4f59-b629-0b526b86296e\",\n        \"name\": \"High-End Laptop\",\n        \"price\": 2400,\n        \"created_at\": \"2024-09-10T15:00:53.066Z\",\n        \"updated_at\": \"2024-09-10T15:00:53.066Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66e06bc63a0d0c9b252b85f3\",\n        \"item_id\": \"92aaccb0-1e1d-4077-9a16-9a5e20a0dfc5\",\n        \"name\": \"apa\",\n        \"price\": 1200,\n        \"created_at\": \"2024-09-10T15:54:46.614Z\",\n        \"updated_at\": \"2024-09-10T15:54:46.614Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update Item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"High-End Laptop\",\r\n  \"price\": 2400\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/item/29536544-4d82-4f59-b629-0b526b86296e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"item",
+								"29536544-4d82-4f59-b629-0b526b86296e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Item",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"High-End Laptop\",\r\n  \"price\": 2400\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/digistar/item/29536544-4d82-4f59-b629-0b526b86296e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"item",
+										"29536544-4d82-4f59-b629-0b526b86296e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "209"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d1-i2u+IwUhy4brGeHE9quPmPyBDYE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:10:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66e05f254bd553ca9929cd04\",\n    \"item_id\": \"29536544-4d82-4f59-b629-0b526b86296e\",\n    \"name\": \"High-End Laptop\",\n    \"price\": 2400,\n    \"created_at\": \"2024-09-10T15:00:53.066Z\",\n    \"updated_at\": \"2024-09-10T15:00:53.066Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"delete\",\r\n  \"price\": 1200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/item/eeca751a-7705-42ab-9507-28796683737c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"item",
+								"eeca751a-7705-42ab-9507-28796683737c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user\": \"66e04362a028cc63c1c00fa0\",  \r\n  \"address\": {\r\n    \"street\": \"1234 Elm St\",\r\n    \"city\": \"Metropolis\",\r\n    \"state\": \"NY\",\r\n    \"zip\": \"10001\",\r\n    \"country\": \"USA\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"customer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Customer",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"customer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "559"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22f-qBb6pwKXbxkWMYo9y3qEO8VQKAM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:11:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"66e06262c248b3a16808f41d\",\n        \"user\": {\n            \"_id\": \"66e04362a028cc63c1c00fa0\",\n            \"user_id\": \"c2719650-9d74-4f1c-9d98-1a8b3045d7cd\",\n            \"username\": \"testuser\",\n            \"email\": \"testuser@example.com\",\n            \"password\": \"$2b$10$LRq1hFHJw5VBjitbFQxzzeNcsCQkyrvAmvDTWBlCDkfF.8vBiEza.\",\n            \"created_at\": \"2024-09-10T13:02:26.697Z\",\n            \"updated_at\": \"2024-09-10T13:02:26.697Z\",\n            \"__v\": 0\n        },\n        \"address\": {\n            \"street\": \"1234 Elm St\",\n            \"city\": \"Metropolis\",\n            \"state\": \"NY\",\n            \"zip\": \"10001\",\n            \"country\": \"USA\",\n            \"_id\": \"66e06262c248b3a16808f41e\"\n        },\n        \"createdAt\": \"2024-09-10T15:14:42.301Z\",\n        \"updatedAt\": \"2024-09-10T15:14:42.301Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Customer by User Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/customer/66e04362a028cc63c1c00fa0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"customer",
+								"66e04362a028cc63c1c00fa0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Customer by User Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/customer/66e04362a028cc63c1c00fa0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"customer",
+										"66e04362a028cc63c1c00fa0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "557"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22d-bj467Lvg3+LdGgD9ludcInpD19E\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:11:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66e06262c248b3a16808f41d\",\n    \"user\": {\n        \"_id\": \"66e04362a028cc63c1c00fa0\",\n        \"user_id\": \"c2719650-9d74-4f1c-9d98-1a8b3045d7cd\",\n        \"username\": \"testuser\",\n        \"email\": \"testuser@example.com\",\n        \"password\": \"$2b$10$LRq1hFHJw5VBjitbFQxzzeNcsCQkyrvAmvDTWBlCDkfF.8vBiEza.\",\n        \"created_at\": \"2024-09-10T13:02:26.697Z\",\n        \"updated_at\": \"2024-09-10T13:02:26.697Z\",\n        \"__v\": 0\n    },\n    \"address\": {\n        \"street\": \"1234 Elm St\",\n        \"city\": \"Metropolis\",\n        \"state\": \"NY\",\n        \"zip\": \"10001\",\n        \"country\": \"USA\",\n        \"_id\": \"66e06262c248b3a16808f41e\"\n    },\n    \"createdAt\": \"2024-09-10T15:14:42.301Z\",\n    \"updatedAt\": \"2024-09-10T15:14:42.301Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user\": \"66e06ee82e8f65c1cda6e736\",  \r\n  \"address\": {\r\n    \"street\": \"--\",\r\n    \"city\": \"Jakarta\",\r\n    \"state\": \"DKI\",\r\n    \"zip\": \"10001\",\r\n    \"country\": \"INDONESIA\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/customer/9bb0ffec-6585-4028-8bfb-a0003d0b3e10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"customer",
+								"9bb0ffec-6585-4028-8bfb-a0003d0b3e10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Customer",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user\": \"66e0653598d43ab0c97dc9bf\",  \r\n  \"address\": {\r\n    \"street\": \"--\",\r\n    \"city\": \"Jakarta\",\r\n    \"state\": \"DKI\",\r\n    \"zip\": \"10001\",\r\n    \"country\": \"INDONESIA\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/digistar/customer/9bb0ffec-6585-4028-8bfb-a0003d0b3e10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"customer",
+										"9bb0ffec-6585-4028-8bfb-a0003d0b3e10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "311"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"137-etzkJ6UNIz3926ekopkCKh6rr6o\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:14:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66e070342e8f65c1cda6e750\",\n    \"customer_id\": \"9bb0ffec-6585-4028-8bfb-a0003d0b3e10\",\n    \"user\": null,\n    \"address\": {\n        \"street\": \"--\",\n        \"city\": \"Jakarta\",\n        \"state\": \"DKI\",\n        \"zip\": \"10001\",\n        \"country\": \"INDONESIA\",\n        \"_id\": \"66e0705c2e8f65c1cda6e75c\"\n    },\n    \"createdAt\": \"2024-09-10T16:13:40.646Z\",\n    \"updatedAt\": \"2024-09-10T16:14:20.144Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/customer/54cb64bb-f994-4538-9ffd-f137faade048",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"customer",
+								"54cb64bb-f994-4538-9ffd-f137faade048"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjMjcxOTY1MC05ZDc0LTRmMWMtOWQ5OC0xYThiMzA0NWQ3Y2QiLCJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkTFJxMWhGSEp3NVZCaml0YkZReHp6ZU5jc0NRa3lydkFtdkRUV0JsQ0RrZkYuOHZCaUV6YS4iLCJpYXQiOjE3MjU5ODIzNjAsImV4cCI6MTcyNTk4NDE2MH0.GB_5dj-66uB1Hdu16VVEG5Y-71OgQep6YCANnT2fbSk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer_id\": \"66e0653598d43ab0c97dc9bf\",\r\n  \"items\": [\r\n    {\r\n      \"itemId\": \"66e05f254bd553ca9929cd04\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjMjcxOTY1MC05ZDc0LTRmMWMtOWQ5OC0xYThiMzA0NWQ3Y2QiLCJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkTFJxMWhGSEp3NVZCaml0YkZReHp6ZU5jc0NRa3lydkFtdkRUV0JsQ0RrZkYuOHZCaUV6YS4iLCJpYXQiOjE3MjU5ODQ0MjAsImV4cCI6MTcyNTk4NjIyMH0.r62_ggUWXmQCY0Is0lSDv_tiY2hdCzOYW8FX6ALti1Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"order"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "457"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c9-8rCsKVGj71d1VeBjXXMoSoTC3UA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:17:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"66e06979600199be25305401\",\n        \"order_id\": \"9543c201-dfa8-48eb-a87c-a81bedcf481f\",\n        \"customer_id\": \"66e0653598d43ab0c97dc9bf\",\n        \"items\": [\n            {\n                \"itemId\": \"66e05f254bd553ca9929cd04\",\n                \"quantity\": 3,\n                \"_id\": \"66e06a00600199be25305412\"\n            }\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66e06bdc3a0d0c9b252b85f5\",\n        \"order_id\": \"d1af7429-6502-4683-bb0a-e22011ccee30\",\n        \"customer_id\": \"66e0653598d43ab0c97dc9bf\",\n        \"items\": [\n            {\n                \"itemId\": \"66e06bc63a0d0c9b252b85f3\",\n                \"quantity\": 1,\n                \"_id\": \"66e06bdc3a0d0c9b252b85f6\"\n            }\n        ],\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Order by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjMjcxOTY1MC05ZDc0LTRmMWMtOWQ5OC0xYThiMzA0NWQ3Y2QiLCJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkTFJxMWhGSEp3NVZCaml0YkZReHp6ZU5jc0NRa3lydkFtdkRUV0JsQ0RrZkYuOHZCaUV6YS4iLCJpYXQiOjE3MjU5ODIzNjAsImV4cCI6MTcyNTk4NDE2MH0.GB_5dj-66uB1Hdu16VVEG5Y-71OgQep6YCANnT2fbSk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/order/9543c201-dfa8-48eb-a87c-a81bedcf481f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"order",
+								"9543c201-dfa8-48eb-a87c-a81bedcf481f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Order by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/order/9543c201-dfa8-48eb-a87c-a81bedcf481f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"order",
+										"9543c201-dfa8-48eb-a87c-a81bedcf481f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e3-EpjkprR37r2Bc1os04oeKNzX6Ls\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:18:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66e06979600199be25305401\",\n    \"order_id\": \"9543c201-dfa8-48eb-a87c-a81bedcf481f\",\n    \"customer_id\": \"66e0653598d43ab0c97dc9bf\",\n    \"items\": [\n        {\n            \"itemId\": \"66e05f254bd553ca9929cd04\",\n            \"quantity\": 3,\n            \"_id\": \"66e06a00600199be25305412\"\n        }\n    ],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjMjcxOTY1MC05ZDc0LTRmMWMtOWQ5OC0xYThiMzA0NWQ3Y2QiLCJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkTFJxMWhGSEp3NVZCaml0YkZReHp6ZU5jc0NRa3lydkFtdkRUV0JsQ0RrZkYuOHZCaUV6YS4iLCJpYXQiOjE3MjU5ODIzNjAsImV4cCI6MTcyNTk4NDE2MH0.GB_5dj-66uB1Hdu16VVEG5Y-71OgQep6YCANnT2fbSk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer_id\": \"66e0653598d43ab0c97dc9bf\",\r\n  \"items\": [\r\n    {\r\n      \"itemId\": \"66e05f254bd553ca9929cd04\",\r\n      \"quantity\": 3\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/order/9543c201-dfa8-48eb-a87c-a81bedcf481f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"order",
+								"9543c201-dfa8-48eb-a87c-a81bedcf481f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Order",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"customer_id\": \"66e0653598d43ab0c97dc9bf\",\r\n  \"items\": [\r\n    {\r\n      \"itemId\": \"66e05f254bd553ca9929cd04\",\r\n      \"quantity\": 3\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/digistar/order/9543c201-dfa8-48eb-a87c-a81bedcf481f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"order",
+										"9543c201-dfa8-48eb-a87c-a81bedcf481f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e3-5O5QDLys0yBZRhfkYFTJy4IKXVo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:18:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66e06979600199be25305401\",\n    \"order_id\": \"9543c201-dfa8-48eb-a87c-a81bedcf481f\",\n    \"customer_id\": \"66e0653598d43ab0c97dc9bf\",\n    \"items\": [\n        {\n            \"itemId\": \"66e05f254bd553ca9929cd04\",\n            \"quantity\": 3,\n            \"_id\": \"66e0715a2e8f65c1cda6e779\"\n        }\n    ],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjMjcxOTY1MC05ZDc0LTRmMWMtOWQ5OC0xYThiMzA0NWQ3Y2QiLCJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkTFJxMWhGSEp3NVZCaml0YkZReHp6ZU5jc0NRa3lydkFtdkRUV0JsQ0RrZkYuOHZCaUV6YS4iLCJpYXQiOjE3MjU5ODIzNjAsImV4cCI6MTcyNTk4NDE2MH0.GB_5dj-66uB1Hdu16VVEG5Y-71OgQep6YCANnT2fbSk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/order/f4e9294b-e8a3-42bc-96fb-1325e6e2e62e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"order",
+								"f4e9294b-e8a3-42bc-96fb-1325e6e2e62e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "Create Payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjMjcxOTY1MC05ZDc0LTRmMWMtOWQ5OC0xYThiMzA0NWQ3Y2QiLCJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkTFJxMWhGSEp3NVZCaml0YkZReHp6ZU5jc0NRa3lydkFtdkRUV0JsQ0RrZkYuOHZCaUV6YS4iLCJpYXQiOjE3MjU5ODIzNjAsImV4cCI6MTcyNTk4NDE2MH0.GB_5dj-66uB1Hdu16VVEG5Y-71OgQep6YCANnT2fbSk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderId\": \"66e06979600199be25305401\",\r\n  \"amount\": 150.00,\r\n  \"method\": \"Credit Card\",\r\n  \"status\": \"Completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Payments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"payment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Payments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/payment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"payment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "535"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"217-V8m+j+u3sdpbu/smQ4EttFZ80Rw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:19:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"66e06b0c3a0d0c9b252b85ed\",\n        \"payment_id\": \"ead29e04-800c-422f-8b58-c04f08276aed\",\n        \"amount\": 150,\n        \"method\": \"Credit Card\",\n        \"status\": \"pending\",\n        \"orderId\": \"66e06979600199be25305401\",\n        \"created_at\": \"2024-09-10T15:51:40.729Z\",\n        \"updated_at\": \"2024-09-10T15:51:40.729Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66e06bfb3a0d0c9b252b85fc\",\n        \"payment_id\": \"8fc17301-539b-4f50-8887-2d18289a41d9\",\n        \"amount\": 120,\n        \"method\": \"Credit Card\",\n        \"status\": \"pending\",\n        \"orderId\": \"66e06bdc3a0d0c9b252b85f5\",\n        \"created_at\": \"2024-09-10T15:55:39.742Z\",\n        \"updated_at\": \"2024-09-10T15:55:39.742Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Payment by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/payment/ead29e04-800c-422f-8b58-c04f08276aed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"payment",
+								"ead29e04-800c-422f-8b58-c04f08276aed"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Payment by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/payment/ead29e04-800c-422f-8b58-c04f08276aed",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"payment",
+										"ead29e04-800c-422f-8b58-c04f08276aed"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "266"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10a-UYBjsU2uziQ2g9sr6WADNo4Zyqw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:19:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66e06b0c3a0d0c9b252b85ed\",\n    \"payment_id\": \"ead29e04-800c-422f-8b58-c04f08276aed\",\n    \"amount\": 150,\n    \"method\": \"Credit Card\",\n    \"status\": \"pending\",\n    \"orderId\": \"66e06979600199be25305401\",\n    \"created_at\": \"2024-09-10T15:51:40.729Z\",\n    \"updated_at\": \"2024-09-10T15:51:40.729Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Payment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderId\": \"66e06979600199be25305401\",\r\n  \"amount\": 150.00,\r\n  \"method\": \"Credit Card\",\r\n  \"status\": \"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/payment/ead29e04-800c-422f-8b58-c04f08276aed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"payment",
+								"ead29e04-800c-422f-8b58-c04f08276aed"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Payment",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"orderId\": \"66e06979600199be25305401\",\r\n  \"amount\": 150.00,\r\n  \"method\": \"Credit Card\",\r\n  \"status\": \"pending\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/digistar/payment/ead29e04-800c-422f-8b58-c04f08276aed",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"payment",
+										"ead29e04-800c-422f-8b58-c04f08276aed"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "266"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10a-UYBjsU2uziQ2g9sr6WADNo4Zyqw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:19:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66e06b0c3a0d0c9b252b85ed\",\n    \"payment_id\": \"ead29e04-800c-422f-8b58-c04f08276aed\",\n    \"amount\": 150,\n    \"method\": \"Credit Card\",\n    \"status\": \"pending\",\n    \"orderId\": \"66e06979600199be25305401\",\n    \"created_at\": \"2024-09-10T15:51:40.729Z\",\n    \"updated_at\": \"2024-09-10T15:51:40.729Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Payment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/payment/66e06bfb3a0d0c9b252b85fc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"payment",
+								"66e06bfb3a0d0c9b252b85fc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delivery",
+			"item": [
+				{
+					"name": "Create Delivery",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderId\": \"66e06979600199be25305401\",\r\n  \"deliveryDate\": \"2021-09-10T12:00:00Z\",\r\n  \"status\": \"Shipped\",\r\n  \"address\": {\r\n    \"street\": \"1234 Elm St\",\r\n    \"city\": \"Somewhere\",\r\n    \"state\": \"CA\",\r\n    \"zip\": \"90210\",\r\n    \"country\": \"USA\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/delivery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"delivery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Deliveries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/delivery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"delivery"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Deliveries",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/delivery",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"delivery"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "368"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"170-4VKaQDJH6HHAWKrQbxAhH2ohJnQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:19:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"address\": {\n            \"street\": \"1234 Elm St\",\n            \"city\": \"Somewhere\",\n            \"state\": \"CA\",\n            \"zip\": \"90210\",\n            \"country\": \"USA\"\n        },\n        \"_id\": \"66e06c5e3a0d0c9b252b85ff\",\n        \"delivery_id\": \"f4a80ae6-2510-4951-8929-2fc3f7707736\",\n        \"status\": \"Pending\",\n        \"orderId\": \"66e06979600199be25305401\",\n        \"deliveryDate\": \"2021-09-10T12:00:00Z\",\n        \"created_at\": \"2024-09-10T15:57:18.444Z\",\n        \"updated_at\": \"2024-09-10T15:57:18.444Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Delivery by Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get Delivery by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/digistar/delivery/f4a80ae6-2510-4951-8929-2fc3f7707736",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"delivery",
+										"f4a80ae6-2510-4951-8929-2fc3f7707736"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "366"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16e-8Tz4LSl1/x9cdBsW/b3mvTRWWTs\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:20:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"address\": {\n        \"street\": \"1234 Elm St\",\n        \"city\": \"Somewhere\",\n        \"state\": \"CA\",\n        \"zip\": \"90210\",\n        \"country\": \"USA\"\n    },\n    \"_id\": \"66e06c5e3a0d0c9b252b85ff\",\n    \"delivery_id\": \"f4a80ae6-2510-4951-8929-2fc3f7707736\",\n    \"status\": \"Pending\",\n    \"orderId\": \"66e06979600199be25305401\",\n    \"deliveryDate\": \"2021-09-10T12:00:00Z\",\n    \"created_at\": \"2024-09-10T15:57:18.444Z\",\n    \"updated_at\": \"2024-09-10T15:57:18.444Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Delivery",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderId\": \"66e06979600199be25305401\",\r\n  \"deliveryDate\": \"2021-09-10T12:00:00Z\",\r\n  \"status\": \"Pending\",\r\n  \"address\": {\r\n    \"street\": \"1234 Elm St\",\r\n    \"city\": \"Somewhere\",\r\n    \"state\": \"CA\",\r\n    \"zip\": \"90210\",\r\n    \"country\": \"USA\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/digistar/delivery/f4a80ae6-2510-4951-8929-2fc3f7707736",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"delivery",
+								"f4a80ae6-2510-4951-8929-2fc3f7707736"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Delivery",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"orderId\": \"66e06979600199be25305401\",\r\n  \"deliveryDate\": \"2021-09-10T12:00:00Z\",\r\n  \"status\": \"Pending\",\r\n  \"address\": {\r\n    \"street\": \"1234 Elm St\",\r\n    \"city\": \"Somewhere\",\r\n    \"state\": \"CA\",\r\n    \"zip\": \"90210\",\r\n    \"country\": \"USA\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/digistar/delivery/f4a80ae6-2510-4951-8929-2fc3f7707736",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"digistar",
+										"delivery",
+										"f4a80ae6-2510-4951-8929-2fc3f7707736"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "366"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16e-8Tz4LSl1/x9cdBsW/b3mvTRWWTs\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Sep 2024 16:20:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"address\": {\n        \"street\": \"1234 Elm St\",\n        \"city\": \"Somewhere\",\n        \"state\": \"CA\",\n        \"zip\": \"90210\",\n        \"country\": \"USA\"\n    },\n    \"_id\": \"66e06c5e3a0d0c9b252b85ff\",\n    \"delivery_id\": \"f4a80ae6-2510-4951-8929-2fc3f7707736\",\n    \"status\": \"Pending\",\n    \"orderId\": \"66e06979600199be25305401\",\n    \"deliveryDate\": \"2021-09-10T12:00:00Z\",\n    \"created_at\": \"2024-09-10T15:57:18.444Z\",\n    \"updated_at\": \"2024-09-10T15:57:18.444Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Delivery",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/digistar/delivery/27138287-b767-44ee-a444-0be757dcc17c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"digistar",
+								"delivery",
+								"27138287-b767-44ee-a444-0be757dcc17c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
